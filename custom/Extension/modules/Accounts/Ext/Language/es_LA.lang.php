@@ -9,3 +9,4 @@ $mod_strings['LBL_VISIT_C'] = 'Visita';
 $mod_strings['LBL_PHOTOGRAPHY_C'] = 'Fotografia';
 $mod_strings['LBL_QUICK_CONTACT_C'] = 'Nombre del contacto rápido';
 $mod_strings['LBL_RATE_C'] = 'Calificación';
+$mod_strings['LBL_RECORDVIEW_PANEL1'] = 'Nuevo Panel 1';

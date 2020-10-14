@@ -222,6 +222,57 @@ array (
           ),
           2 => 
           array (
+            'newTab' => false,
+            'panelDefault' => 'expanded',
+            'name' => 'LBL_RECORDVIEW_PANEL1',
+            'label' => 'LBL_RECORDVIEW_PANEL1',
+            'columns' => 2,
+            'placeholders' => 1,
+            'fields' => 
+            array (
+              0 => 
+              array (
+                'name' => 'photography_c',
+                'studio' => 'visible',
+                'label' => 'LBL_PHOTOGRAPHY_C',
+              ),
+              1 => 
+              array (
+              ),
+              2 => 
+              array (
+                'name' => 'gps_latitud_c',
+                'label' => 'LBL_GPS_LATITUD_C',
+              ),
+              3 => 
+              array (
+                'name' => 'gps_longitud_c',
+                'label' => 'LBL_GPS_LONGITUD_C',
+              ),
+              4 => 
+              array (
+                'name' => 'quick_contact_c',
+                'label' => 'LBL_QUICK_CONTACT_C',
+              ),
+              5 => 
+              array (
+                'name' => 'business_type_c',
+                'label' => 'LBL_BUSINESS_TYPE_C',
+              ),
+              6 => 
+              array (
+                'name' => 'rate_c',
+                'label' => 'LBL_RATE_C',
+              ),
+              7 => 
+              array (
+                'name' => 'visit_c',
+                'label' => 'LBL_VISIT_C',
+              ),
+            ),
+          ),
+          3 => 
+          array (
             'name' => 'panel_hidden',
             'label' => 'LBL_RECORD_SHOWMORE',
             'hide' => true,
