@@ -7,7 +7,7 @@ class Account_Hooks
 
             $updateImgQR = "UPDATE accounts_cstm SET imagen_qr_c='{$bean->temp_id_img_qr_c}' WHERE id_c='{$bean->id}'";
             $GLOBALS['log']->fatal("QUERY ACTUALIZACION ".$updateImgQR);
-            //$GLOBALS['db']->query($updateImgQR);
+            $GLOBALS['db']->query($updateImgQR);
         }
         
     }

@@ -63,7 +63,7 @@
                         $input = self.$('input[type=file]');
                         self.model.set('temp_id_img_qr_c',data);
 
-                        /*
+                        
                         self.model.save(null, {
                             fields: ['temp_id_img_qr_c'],
                             success(model) {
@@ -73,7 +73,8 @@
                                 console.log("ERROR AL GUARDAR LA IMAGEN QR "+err);
                             },
                         });
-                        */
+                        
+                        /*
                         self.model.uploadFile(
                             'imagen_qr_c',
                             $input,
@@ -91,6 +92,7 @@
                             },
                             {}
                             );
+                        */
 
                         
                     }//fin if data
