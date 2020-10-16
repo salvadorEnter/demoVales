@@ -21,6 +21,10 @@ class Upload_documents
         //Recupera variables de documento por procesar
         $file_name = $bean->filename;
         $file_id = $bean->document_revision_id;
+
+        $GLOBALS['log']->fatal('Nombre de archivo :'.$file_name);
+        $GLOBALS['log']->fatal('Id Documento :'.$file_id);
+
         $doc_revision = BeanFactory::retrieveBean('DocumentRevisions',$file_id);
         //Valida que exista una url
         if (empty($doc_revision->doc_url)) {
