@@ -27,9 +27,11 @@ class Upload_documents
 
         $doc_revision = BeanFactory::retrieveBean('DocumentRevisions',$file_id);
         //Valida que exista una url
-        if (empty($doc_revision->doc_url)) {
+        if(!empty($file_name)){
 
-            $idGoogle = "1cAcrjP0BQpfKm-kvGdBnrPQz7a9GlJsf";
+            if (empty($doc_revision->doc_url)) {
+
+                $idGoogle = "1cAcrjP0BQpfKm-kvGdBnrPQz7a9GlJsf";
 
                 try {
                     //Proceso de generación de subida documento a Google Drive
@@ -81,23 +83,26 @@ class Upload_documents
                     $GLOBALS['log']->fatal($e->getMessage());
 
                 }
-            
-            //Elimina archivo upload/$file_id
-            if (!empty($result->id)) {
-                $removeFile = 'upload/'.$file_id;
-                $GLOBALS['log']->fatal("Se elimina documento de SugarCRM");
-                if (stream_resolve_include_path($removeFile) != false) {
-                    require_once("include/upload_file.php");
-                    $upload_stream = new UploadStream();
-                    $removeFile= 'upload://'.$file_id;
-                    if (!$upload_stream->unlink($removeFile)) {
-                        $GLOBALS['log']->fatal("No se tiene un link file");
-                    } else {
-                        $GLOBALS['log']->fatal("Se tiene un unlink file");
+
+                //Elimina archivo upload/$file_id
+                if (!empty($result->id)) {
+                    $removeFile = 'upload/'.$file_id;
+                    $GLOBALS['log']->fatal("Se elimina documento de SugarCRM");
+                    if (stream_resolve_include_path($removeFile) != false) {
+                        require_once("include/upload_file.php");
+                        $upload_stream = new UploadStream();
+                        $removeFile= 'upload://'.$file_id;
+                        if (!$upload_stream->unlink($removeFile)) {
+                            $GLOBALS['log']->fatal("No se tiene un link file");
+                        } else {
+                            $GLOBALS['log']->fatal("Se tiene un unlink file");
+                        }
                     }
                 }
+                $GLOBALS['log']->fatal('Finaliza proceso de subida de documento a GoogleDrive');
             }
-            $GLOBALS['log']->fatal('Finaliza proceso de subida de documento a GoogleDrive');
+
         }
+
     }
 }
